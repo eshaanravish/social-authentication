@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CLIENT_SECRET = 'sdt1DIDKbxlBH5gXSSwZ-ckj'
 
 # Application definition
 
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +56,7 @@ ROOT_URLCONF = 'authenticate.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -66,6 +68,27 @@ TEMPLATES = [
         },
     },
 ]
+
+API_KEY = 'AIzaSyDOlDWjIfYOixR2HPACXVl4sfsD-vqaSos'
+#
+GOOGLE_APPLICATION_CREDENTIALS = os.path.join(BASE_DIR, 'client_secret.json')
+#
+# CLIENT_ID = "173051735867-u1hm74c3qf1d0n5j8oa90ovdfnd8osbk.apps.googleusercontent.com"
+#
+CLIENT_SECRET = "NbxNp6yZtN1QiBY-vUQ9zMot"
+
+
+CLIENT_ID = '459600573348-f8ng5ifjugc14t8afnhhcphjml8nckir.apps.googleusercontent.com'
+SCOPE = 'https://www.googleapis.com/auth/userinfo.profile',
+        # 'https://www.googleapis.com/auth/userinfo.email',
+REDIRECT_URI = 'https://localhost:8001/home/'
+
+
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 WSGI_APPLICATION = 'authenticate.wsgi.application'
 
@@ -105,7 +128,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -113,6 +136,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+CSRF_COOKIE_SECURE=False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/

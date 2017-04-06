@@ -9,6 +9,8 @@ from django.views.static import serve
 urlpatterns = [
     url(r'^$', views.homepage, name='homepage'),
     url(r'^google_home/$', views.googleauth, name='googleauth'),
+    url(r'^instagram_home/$', views.instaauth, name='instaauth'),
+    url(r'^main/$', views.get_insta_auth, name='get_insta_auth'),
     url(r'^home/$', views.socialgoogle, name='socialgoogle'),
     url(r'^facebook_home/$', views.facebookauth, name='facebookauth'),
     url(r'^redirect/$', views.userauthenticate, name='userauthenticate'),

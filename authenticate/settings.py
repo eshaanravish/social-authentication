@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CLIENT_ID = '459600573348-f8ng5ifjugc14t8afnhhcphjml8nckir.apps.googleusercontent.com'
+
 CLIENT_SECRET = 'sdt1DIDKbxlBH5gXSSwZ-ckj'
 
 # Application definition
@@ -74,11 +76,11 @@ API_KEY = 'AIzaSyDOlDWjIfYOixR2HPACXVl4sfsD-vqaSos'
 GOOGLE_APPLICATION_CREDENTIALS = os.path.join(BASE_DIR, 'client_secret.json')
 #
 # CLIENT_ID = "173051735867-u1hm74c3qf1d0n5j8oa90ovdfnd8osbk.apps.googleusercontent.com"
+# #
+# CLIENT_SECRET = "NbxNp6yZtN1QiBY-vUQ9zMot"
 #
-CLIENT_SECRET = "NbxNp6yZtN1QiBY-vUQ9zMot"
-
-
-CLIENT_ID = '459600573348-f8ng5ifjugc14t8afnhhcphjml8nckir.apps.googleusercontent.com'
+#
+# CLIENT_ID = '459600573348-f8ng5ifjugc14t8afnhhcphjml8nckir.apps.googleusercontent.com'
 SCOPE = 'https://www.googleapis.com/auth/userinfo.profile',
         # 'https://www.googleapis.com/auth/userinfo.email',
 REDIRECT_URI = 'https://localhost:8001/home/'

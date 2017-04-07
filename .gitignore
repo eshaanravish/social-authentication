@@ -1,3 +1,4 @@
 client_secret_210523529134-nuas607qtkjrs5rnbult07juhsr04j8k.apps.googleusercontent.com (1).json
 db.sqlite3
 static/
+*.pyc

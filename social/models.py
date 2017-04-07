@@ -7,15 +7,37 @@ from django.utils import timezone
 import datetime
 
 
-class FacebookUser(models.Model):
-    facebook_user = models.ForeignKey(User, blank=True, null=True)
-    facebook_userid = models.CharField(max_length=200)
+class LinkedinUser(models.Model):
+    linkedin_user = models.ForeignKey(User, blank=True, null=True)
+    linkedin_userid = models.CharField(max_length=200)
     name = models.CharField(max_length=50)
     email = models.EmailField()
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.facebook_user
+        return self.linkedin_userid
+
+
+class InstagramUser(models.Model):
+    instagram_user = models.ForeignKey(User, blank=True, null=True)
+    instagram_userid = models.CharField(max_length=200)
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.instagram_user
+
+
+class FacebookUser(models.Model):
+    facebook_user = models.ForeignKey(User, blank=True, null=True)
+    facebook_userid = models.CharField(max_length=200)
+    name = models.CharField(max_length=50)
+    email = models.EmailField(blank=True, null=True)
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.facebook_userid
 
 class GoogleUser(models.Model):
     google_user = models.ForeignKey(User, blank=True, null=True)

@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import FacebookUser, GoogleUser, LinkedinUser, InstagramUser
+from .models import FacebookUser, GoogleUser, LinkedinUser, InstagramUser, TwitterProfile
 
 
 
@@ -24,3 +24,8 @@ class GoogleUserAdmin(admin.ModelAdmin):
     list_display = ('google_user', 'google_userid', 'email')
 
 admin.site.register(GoogleUser, GoogleUserAdmin)
+
+class TwitterProfileAdmin(admin.ModelAdmin):
+    list_display = ('user', 'oauth_token')
+
+admin.site.register(TwitterProfile, TwitterProfileAdmin)

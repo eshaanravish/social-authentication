@@ -1,10 +1,10 @@
 from __future__ import unicode_literals
 
+import datetime
+from django.utils import timezone
 # Create your models here.
 from django.contrib.auth.models import User
 from django.db import models
-from django.utils import timezone
-import datetime
 
 
 class LinkedinUser(models.Model):
@@ -48,3 +48,11 @@ class GoogleUser(models.Model):
 
     def __int__(self):
         return self.google_user
+
+class TwitterProfile(models.Model):
+    user = models.ForeignKey(User)
+    oauth_token = models.CharField(max_length=200)
+    oauth_secret = models.CharField(max_length=200)
+
+    def __int__(self):
+        return self.user
